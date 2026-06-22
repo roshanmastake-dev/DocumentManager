@@ -3,8 +3,8 @@ package com.roshan.documentmanager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
+import com.roshan.documentmanager.navigation.AppNavigation
+import com.roshan.documentmanager.ui.theme.DocumentManagerTheme
 
 class MainActivity : ComponentActivity() {
 
@@ -14,11 +14,9 @@ class MainActivity : ComponentActivity() {
 
         setContent {
 
-            Surface(
+            DocumentManagerTheme {
 
-                color = MaterialTheme.colorScheme.background
-
-            ) {
+                AppNavigation()
 
             }
 
