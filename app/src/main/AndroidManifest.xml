@@ -1,3 +1,6 @@
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+<uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED"/>
 <?xml version="1.0" encoding="utf-8"?>
 
 <manifest
