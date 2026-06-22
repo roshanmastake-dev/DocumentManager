@@ -10,4 +10,24 @@ object MimeTypes {
 
     )
 
+    fun isImage(
+
+        mime: String
+
+    ): Boolean {
+
+        return mime.startsWith("image")
+
+    }
+
+    fun isPdf(
+
+        mime: String
+
+    ): Boolean {
+
+        return mime == "application/pdf"
+
+    }
+
 }
