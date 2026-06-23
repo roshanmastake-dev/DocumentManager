@@ -1,26 +1,53 @@
 package com.roshan.documentmanager.ui.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 
 @Composable
 fun BreadcrumbBar(
 
-    path: String
+    path: List<String>
 
 ) {
 
-    Text(
+    Row(
 
-        text = path,
+        modifier = androidx.compose.ui.Modifier
 
-        modifier = Modifier.fillMaxWidth(),
+            .horizontalScroll(
 
-        style = MaterialTheme.typography.bodyMedium
+                rememberScrollState()
 
-    )
+            )
+
+    ) {
+
+        path.forEachIndexed { index, item ->
+
+            Text(
+
+                text = item,
+
+                style = MaterialTheme.typography.bodyLarge
+
+            )
+
+            if (
+
+                index != path.lastIndex
+
+            ) {
+
+                Text(" > ")
+
+            }
+
+        }
+
+    }
 
 }
