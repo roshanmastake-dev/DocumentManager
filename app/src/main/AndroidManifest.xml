@@ -9,7 +9,7 @@
         android:allowBackup="true"
         android:label="Document Manager"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DocumentManager">
+        android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
         <activity
             android:name=".MainActivity"
