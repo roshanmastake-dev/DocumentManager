@@ -8,12 +8,12 @@
         android:name=".DocumentManagerApp"
         android:allowBackup="true"
         android:label="Document Manager"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.Material.Light.NoActionBar">
+        android:supportsRtl="true">
 
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@android:style/Theme.Material.Light.NoActionBar">
 
             <intent-filter>
 
