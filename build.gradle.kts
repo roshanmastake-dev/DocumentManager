@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <style name="Theme.DocumentManager" parent="android:Theme.Material.Light.NoActionBar">
-    </style>
-</resources>
+plugins {
+    id("com.android.application") version "8.5.2" apply false
+    id("org.jetbrains.kotlin.android") version "2.0.21" apply false
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21" apply false
+    id("com.google.devtools.ksp") version "2.0.21-1.0.25" apply false
+    id("com.google.dagger.hilt.android") version "2.56.2" apply false
+}
