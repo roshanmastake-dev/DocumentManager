@@ -11,7 +11,7 @@ android {
     compileSdk = 36
 
      composeOptions {
-    kotlinCompilkotlinCompilerExtensionVersion = \"1.5.15\"erExtensionVersion = "1.5.15"
+    kotlinCompilerExtensionVersion = "1.5.15"
      }
 
     defaultConfig {
