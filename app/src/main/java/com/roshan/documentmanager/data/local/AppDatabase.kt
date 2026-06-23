@@ -28,4 +28,10 @@ abstract class AppDatabase : RoomDatabase() {
 
     abstract fun documentDao(): DocumentDao
 
+    companion object {
+
+        const val DATABASE_NAME = "document_manager.db"
+
+    }
+
 }
