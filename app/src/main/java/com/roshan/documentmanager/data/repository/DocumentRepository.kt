@@ -2,6 +2,7 @@ package com.roshan.documentmanager.data.repository
 
 import com.roshan.documentmanager.data.local.dao.DocumentDao
 import com.roshan.documentmanager.data.local.entity.DocumentEntity
+import com.roshan.documentmanager.data.local.entity.DocumentWithCategory
 import kotlinx.coroutines.flow.Flow
 
 class DocumentRepository(
@@ -10,13 +11,25 @@ class DocumentRepository(
 
 ) {
 
+    fun getAllDocuments(): Flow<List<DocumentWithCategory>> {
+
+        return dao.getAllDocuments()
+
+    }
+
     fun getDocuments(
 
         categoryId: Long
 
     ): Flow<List<DocumentEntity>> {
 
-        return dao.getDocuments(categoryId)
+        return dao.getDocumentsByCategory(categoryId)
+
+    }
+
+    fun getFavoriteDocuments(): Flow<List<DocumentEntity>> {
+
+        return dao.getFavoriteDocuments()
 
     }
 
@@ -35,6 +48,32 @@ class DocumentRepository(
         document: DocumentEntity
 
     ) {
+
+        dao.update(document)
+
+    }
+
+    suspend fun delete(
+
+        document: DocumentEntity
+
+    ) {
+
+        dao.delete(document)
+
+    }
+
+    suspend fun deleteById(
+
+        id: Long
+
+    ) {
+
+        dao.deleteById(id)
+
+    }
+
+}
 
         dao.update(document)
 
