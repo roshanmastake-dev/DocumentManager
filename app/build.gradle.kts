@@ -10,6 +10,10 @@ android {
     namespace = "com.roshan.documentmanager"
     compileSdk = 36
 
+     composeOptions {
+    kotlinCompilkotlinCompilerExtensionVersion = \"1.5.15\"erExtensionVersion = "1.5.15"
+     }
+
     defaultConfig {
         applicationId = "com.roshan.documentmanager"
         minSdk = 24
