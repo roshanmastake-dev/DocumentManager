@@ -1,23 +1,30 @@
-<intent-filter>
+<?xml version="1.0" encoding="utf-8"?>
 
-    <action android:name="android.intent.action.SEND"/>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <action android:name="android.intent.action.SEND_MULTIPLE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <category android:name="android.intent.category.DEFAULT"/>
+    <application
+        android:name=".DocumentManagerApp"
+        android:allowBackup="true"
+        android:label="Document Manager"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DocumentManager">
 
-    <data android:mimeType="image/*"/>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
 
-</intent-filter>
+            <intent-filter>
 
-<intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
 
-    <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
 
-    <action android:name="android.intent.action.SEND_MULTIPLE"/>
+            </intent-filter>
 
-    <category android:name="android.intent.category.DEFAULT"/>
+        </activity>
 
-    <data android:mimeType="application/pdf"/>
+    </application>
 
-</intent-filter>
+</manifest>
